@@ -1,3 +1,48 @@
-// Place all the styles related to the mouths controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background-color: #FFCCFF;
+  text-align: center;
+  margin: 0;
+}
+h1{
+  color: red;
+}
+tr{
+  padding-left: 10px;
+  border-collapse: collapse;
+  padding: 10px;
+}
+td{
+  border: 2px solid black;
+  padding: 10px;
+}
+th{
+  border: 3px solid black;
+}
+table{
+  border-collapse: collapse;
+  border: 3px solid black;
+  background-color: white;
+  width: 100%;
+}
+.link{
+  font-size: 8px;
+  padding: 20px;
+}
+textarea{
+  width: 600px;
+  height: 400px;
+}
+footer{
+  background-color: #FF99FF;
+}
+#mouth{
+  font-size: 50px;
+}
+#title{
+  font-size: 2rem;
+  margin-bottom: 8px;
+  padding-top: 1rem;
+}
+#message{
+  margin-bottom: 0;
+}
