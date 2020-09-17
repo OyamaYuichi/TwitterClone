@@ -5,7 +5,11 @@ class MouthsController < ApplicationController
     @mouth = Mouth.new
   end
   def create
-    Mouth.create(content: params[:mouth][:content])
+    Mouth.create(mouth_params)
     redirect_to new_mouth_path
+  end
+  private
+  def mouth_params
+    params.require(:mouth).permit(:content)
   end
 end
