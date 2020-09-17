@@ -9,7 +9,7 @@ class MouthsController < ApplicationController
   def create
     @mouth = Mouth.new(mouth_params)
     if @mouth.save
-      redirect_to mouths_path
+      redirect_to mouths_path, notice: "投稿しました！"
     else
       render :new
     end
@@ -20,14 +20,14 @@ class MouthsController < ApplicationController
   end
   def update
     if @mouth.update(mouth_params)
-      redirect_to mouths_path
+      redirect_to mouths_path, notice: "編集しました！"
     else
       render :edit
     end
   end
   def destroy
     @mouth.destroy
-    redirect_to mouths_path
+    redirect_to mouths_path, notice: "削除しました！"
   end
   private
   def mouth_params
