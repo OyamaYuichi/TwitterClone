@@ -1,5 +1,5 @@
 class MouthsController < ApplicationController
-  before_action :set_mouth, only: [:show, :edit, :update]
+  before_action :set_mouth, only: [:show, :edit, :update, :destroy]
   def index
     @mouths = Mouth.all
   end
@@ -24,6 +24,10 @@ class MouthsController < ApplicationController
     else
       render :edit
     end
+  end
+  def destroy
+    @mouth.destroy
+    redirect_to mouths_path
   end
   private
   def mouth_params
