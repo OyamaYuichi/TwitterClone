@@ -6,8 +6,12 @@ class MouthsController < ApplicationController
     @mouth = Mouth.new
   end
   def create
-    Mouth.create(mouth_params)
-    redirect_to new_mouth_path
+    @mouth = Mouth.new(mouth_params)
+    if @mouth.save
+      redirect_to mouths_path
+    else
+      render :new
+    end
   end
   def show
     @mouth = Mouth.find(params[:id])
