@@ -1,2 +1,12 @@
-<h1>Mouths#index</h1>
-<p>Find me in app/views/mouths/index.html.erb</p>
+<h1>投稿一覧</h1>
+<table>
+  <tr>
+    <th>内容</th>
+  </tr>
+<% @mouths.each do |mouth| %>
+  <tr>
+    <td><%= mouth.content %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to 'あなたの心の言葉を投稿する', new_mouth_path %>

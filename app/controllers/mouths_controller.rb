@@ -1,5 +1,6 @@
 class MouthsController < ApplicationController
   def index
+    @mouths = Mouth.all
   end
   def new
     @mouth = Mouth.new
