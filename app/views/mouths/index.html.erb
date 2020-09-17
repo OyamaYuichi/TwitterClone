@@ -7,6 +7,7 @@
   <tr>
     <td><%= mouth.content %></td>
     <td><%= link_to '詳細を確認する', mouth_path(mouth.id)%></td>
+    <td><%= link_to '投稿を編集する', edit_mouth_path(mouth.id)%></td>
   </tr>
 <% end %>
 </table>

@@ -16,6 +16,17 @@ class MouthsController < ApplicationController
   def show
     @mouth = Mouth.find(params[:id])
   end
+  def edit
+    @mouth = Mouth.find(params[:id])
+  end
+  def update
+    @mouth = Mouth.find(params[:id])
+    if @mouth.update(mouth_params)
+      redirect_to mouths_path
+    else
+      render :edit
+    end
+  end
   private
   def mouth_params
     params.require(:mouth).permit(:content)
