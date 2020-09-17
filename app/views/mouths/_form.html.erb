@@ -1,0 +1,20 @@
+<%= form_with(model: @mouth, local: true) do |form| %>
+
+  <% if @mouth.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @mouth.errors.count %>件のエラーがあります。</h2>
+      <ul>
+      <% @mouth.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.label :内容 %>
+  <div class="mouth_content">
+    <%= form.text_area :content %>
+  </div>
+  <%= form.submit value="投稿する"%>
+<% end %>
+<%= link_to "ブログ一覧画面にもどる", mouths_path %>

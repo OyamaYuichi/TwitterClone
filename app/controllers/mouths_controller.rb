@@ -1,4 +1,5 @@
 class MouthsController < ApplicationController
+  before_action :set_mouth, only: [:show, :edit, :update]
   def index
     @mouths = Mouth.all
   end
@@ -14,13 +15,10 @@ class MouthsController < ApplicationController
     end
   end
   def show
-    @mouth = Mouth.find(params[:id])
   end
   def edit
-    @mouth = Mouth.find(params[:id])
   end
   def update
-    @mouth = Mouth.find(params[:id])
     if @mouth.update(mouth_params)
       redirect_to mouths_path
     else
@@ -30,5 +28,8 @@ class MouthsController < ApplicationController
   private
   def mouth_params
     params.require(:mouth).permit(:content)
+  end
+  def set_mouth
+    @mouth = Mouth.find(params[:id])
   end
 end
