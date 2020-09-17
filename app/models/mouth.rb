@@ -1,0 +1,2 @@
+class Mouth < ApplicationRecord
+end
