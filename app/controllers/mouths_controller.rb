@@ -9,6 +9,9 @@ class MouthsController < ApplicationController
     Mouth.create(mouth_params)
     redirect_to new_mouth_path
   end
+  def show
+    @mouth = Mouth.find(params[:id])
+  end
   private
   def mouth_params
     params.require(:mouth).permit(:content)

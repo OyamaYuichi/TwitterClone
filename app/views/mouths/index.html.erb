@@ -6,6 +6,7 @@
 <% @mouths.each do |mouth| %>
   <tr>
     <td><%= mouth.content %></td>
+    <td><%= link_to '詳細を確認する', mouth_path(mouth.id)%></td>
   </tr>
 <% end %>
 </table>
