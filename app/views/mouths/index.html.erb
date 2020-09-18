@@ -5,6 +5,7 @@
     <title>fsaaf</title>
   </head>
   <body>
+  <div id="container">
     <header class="clearfix">
       <link rel="icon" href="./images/favicon.ico">
       <h1 id=mouth>💋Mouth💋</h1>
@@ -12,26 +13,29 @@
       <p><%= notice %></p>
       <%= link_to 'あなたの心の言葉を投稿する', new_mouth_path %>
     </header>
-    <table class=text>
-      <tr class="row">
-        <th>内容</th>
-        <th>確認</th>
-        <th>編集</th>
-        <th>削除</th>
-      </tr>
-    <% @mouths.each do |mouth| %>
-      <tr class="row">
-        <td><%= mouth.content %></td>
-        <td class="link"><%= link_to '詳細を確認する', mouth_path(mouth.id)%></td>
-        <td class="link"><%= link_to '投稿を編集する', edit_mouth_path(mouth.id)%></td>
-        <td class="link"><%= link_to '投稿を削除する', mouth_path(mouth.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？'}%></td>
-      </tr>
-    <% end %>
-    </table>
-    <%= link_to 'あなたの心の言葉を投稿する', new_mouth_path %>
+    <div class="main">
+      <table class=text>
+        <tr class="row">
+          <th>内容</th>
+          <th>確認</th>
+          <th>編集</th>
+          <th>削除</th>
+        </tr>
+      <% @mouths.each do |mouth| %>
+        <tr class="row">
+          <td><%= mouth.content %></td>
+          <td class="link"><%= link_to '詳細を確認する', mouth_path(mouth.id)%></td>
+          <td class="link"><%= link_to '投稿を編集する', edit_mouth_path(mouth.id)%></td>
+          <td class="link"><%= link_to '投稿を削除する', mouth_path(mouth.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？'}%></td>
+        </tr>
+      <% end %>
+      </table>
+      <%= link_to 'あなたの心の言葉を投稿する', new_mouth_path %>
+    </div>
     <footer>
       <p id=title>💋Mouth💋</p>
       <p id="message">さぁー！心の扉を開いて今の思いを投稿しよう！</p>
     </footer>
+  </div>
   </body>
 </html>

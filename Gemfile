@@ -3,15 +3,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
-# Core
+
 gem 'rails', '~> 5.2.4'
-# Middleware
+
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
-# View/Front
+
 gem 'sass-rails', '~> 5.0'
 gem 'coffee-rails', '~> 4.2'
-# Backend
+
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
@@ -35,9 +35,9 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-#アプリケーション名変更
+
 gem 'rename'
-# デバック用のgem
+
 group :development, :test do
   gem 'pry-rails'
   gem 'better_errors'
