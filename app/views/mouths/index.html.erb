@@ -23,7 +23,7 @@
         </tr>
       <% @mouths.each do |mouth| %>
         <tr class="row">
-          <td><%= mouth.content %></td>
+          <td><%== mouth.content %></td>
           <td class="link"><%= link_to '詳細を確認する', mouth_path(mouth.id)%></td>
           <td class="link"><%= link_to '投稿を編集する', edit_mouth_path(mouth.id)%></td>
           <td class="link"><%= link_to '投稿を削除する', mouth_path(mouth.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？'}%></td>

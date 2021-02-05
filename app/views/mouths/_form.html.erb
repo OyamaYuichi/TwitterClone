@@ -12,8 +12,9 @@
   <% end %>
 
   <%= form.label :内容 %>
-  <div class="mouth_content">
-    <%= form.text_area :content %>
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, 'data-provider': :summernote %> #この行
   </div>
   <%= form.submit value="投稿する"%>
 <% end %>

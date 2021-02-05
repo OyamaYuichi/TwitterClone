@@ -54,3 +54,8 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
 end
+
+gem 'jquery-rails', '~> 4.3.1'
+gem 'bootstrap', '~> 4.0.0'
+gem 'summernote-rails', '~> 0.8.10.0'
+gem 'simple_form'
